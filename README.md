@@ -25,3 +25,6 @@ Esta seção listará os principais projetos e desafios que foram ou serão dese
 * **Insights:** Neste desafio, aprendi a interligar diferentes serviços AWS, como um servidor web (EC2) que se conecta a um banco de dados (RDS) e entrega conteúdo estático a partir de um bucket (S3) com a ajuda do CloudFront para otimizar o desempenho.
 
 ![Diagrama de Arquitetura AWS](images/diagrama_ec2_aws.png)
+
+### Desafio 2: Criar S3, alterar políticas e fazer upload do website
+* **Acesso:** [Website](https://github.com/Bootcamp-AWS-DIO/website-aws).
