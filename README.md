@@ -27,4 +27,4 @@ Esta seção listará os principais projetos e desafios que foram ou serão dese
 ![Diagrama de Arquitetura AWS](images/diagrama_ec2_aws.png)
 
 ### Desafio 2: Criar S3, alterar políticas e fazer upload do website
-* **Acesso:** [Website](https://github.com/Bootcamp-AWS-DIO/website-aws).
+* **Repositório:** [Website](https://github.com/Bootcamp-AWS-DIO/website-aws).
