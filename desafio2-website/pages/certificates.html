@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Resume - Formação AWS Foundations</title>
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<style>
+body {
+  perspective: 1;
+}
+.img-certificate {
+  max-width: 150%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+/* Estilos para a miniatura */
+.thumb {
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    justify-content: center;
+    transition: all 0.3s linear;
+    
+}
+
+.thumb:hover {
+  perspective: 1000px;
+  /* transform: rotateX(10deg) scale(1.1); */
+  transform: scale(1.1)
+}
+
+.modalx {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.767);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: visibility 0s, opacity 0.5s linear;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* exibe o modalx quando a ID é o alvo da URL */
+.modalx:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*  imagem expandida */
+.modalx img {
+    max-width: 90%;
+    max-height: 90%;
+    align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* Estilos para o botão de fechar */
+.fechar-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+
+<body id="page-top">
+  
+  <!-- Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+       <a class="navbar-brand js-scroll-trigger" href="#page-top">
+         <!-- <span class="d-block d-lg-none">Formação AWS Foundations - alterado</span> -->
+         <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+             src="../assets/img/profile.jpg" alt="..." /></span>
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+           class="navbar-toggler-icon"></span></button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav">
+           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html">Sobre</a></li>
+         </ul>
+       </div>
+       <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+         <span class="d-none d-lg-block"><img class="img-fluid mx-auto mb-2" src="assets/img/logo.png" alt="..." /></span>
+       </div> -->
+     </nav>
+    
+ <section class="resume-section" id="certificados">
+  <div class="resume-section-content">
+    <h1 class="mb-5">Certificados</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <a href="#alura">
+          <img src="../certificates_img/alura_ai.png" alt="Alura" class="thumb">
+        </a>
+        <div id="alura" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/alura_ai.png" alt="Alura expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#aluraagent">
+          <img src="../certificates_img/alura_agentAI.jpg" alt="Alura" class="thumb">
+        </a>
+        <div id="aluraagent" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/alura_agentAI.jpg" alt="Alura expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#mpu">
+          <img src="../certificates_img/mpu.png" alt="MPU" class="thumb">
+        </a>
+        <div id="mpu" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/mpu.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#robopampa">
+          <img src="../certificates_img/robopampa.png" alt="MPU" class="thumb">
+        </a>
+        <div id="robopampa" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/robopampa.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#nvidia">
+          <img src="../certificates_img/nvidia.png" alt="MPU" class="thumb">
+        </a>
+        <div id="nvidia" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/nvidia.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#sbai">
+          <img src="../certificates_img/sbai.png" alt="MPU" class="thumb">
+        </a>
+        <div id="sbai" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/sbai.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#tic">
+          <img src="../certificates_img/tic.png" alt="MPU" class="thumb">
+        </a>
+        <div id="tic" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/tic.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#comite">
+          <img src="../certificates_img/comite.png" alt="MPU" class="thumb">
+        </a>
+        <div id="comite" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/comite.png" alt="MPU expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#cg1">
+          <img src="../certificates_img/cg-1.png" alt="CodeGirls" class="thumb">
+        </a>
+        <div id="cg1" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/cg-1.png" alt="CodeGirls expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#cg2">
+          <img src="../certificates_img/cg-2.png" alt="CodeGirls" class="thumb">
+        </a>
+        <div id="cg2" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/cg-2.png" alt="CodeGirls expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#cg3">
+          <img src="../certificates_img/cg-3.png" alt="CodeGirls" class="thumb">
+        </a>
+        <div id="cg3" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/cg-3.png" alt="CodeGirls expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#cg4">
+          <img src="../certificates_img/cg-4.png" alt="CodeGirls" class="thumb">
+        </a>
+        <div id="cg4" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/cg-4.png" alt="CodeGirls expandido">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#python">
+          <img src="../certificates_img/python.png" alt="Python" class="thumb">
+        </a>
+        <div id="python" class="modalx">
+          <a href="#fechar" class="fechar-btn">&times;</a>
+          <img src="../certificates_img/python.png" alt="Python expandido">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</body>
+
+</html>
