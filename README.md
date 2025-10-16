@@ -27,10 +27,13 @@ Esta seção listará os principais projetos e desafios que foram ou serão dese
 ![Diagrama de Arquitetura AWS](images/diagrama_ec2_aws.png)
 
 ### Desafio 2: Criar S3, alterar políticas e fazer upload do website
-* **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/Bootcamp-AWS-DIO/website-aws).
-* **👩‍💻 Acesse o projeto:** [Clique aqui :) ](https://kellitissot.github.io/website-formacao-aws/)
+* **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/KelliTissot/codegirls_aws/tree/main/desafio2-website).
+* **👩‍💻 Visualize a página:** [Clique aqui :) ](https://kellitissot.github.io/website-formacao-aws/)
 
 
-### Desafio 3: Stepfunctions utilizando Amazon Bedrock - IA generativa
+### Desafio 3: StepFunctions utilizando Amazon Bedrock - IA generativa
 * **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/KelliTissot/codegirls_aws/tree/main/desafio3-stepfunctions).
+
+### Desafio 4: CloudFormation para criar um StepFunction Chatbot com Amazon Bedrock
+* **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/KelliTissot/codegirls_aws/tree/main/desafio4-cloudformation).
 
