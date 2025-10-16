@@ -1,0 +1,114 @@
+{
+   "Resources":{
+      "BedrockExecutionRole":{
+         "Type":"AWS::IAM::Role",
+         "Properties":{
+            "RoleName":"StateMachine-Bedrock-Execution-Role",
+            "AssumeRolePolicyDocument":{
+               "Version":"2012-10-17",
+               "Statement":[
+                  {
+                     "Effect":"Allow",
+                     "Principal":{
+                        "Service":"states.amazonaws.com"
+                     },
+                     "Action":"sts:AssumeRole"
+                  }
+               ]
+            },
+            "Policies":[
+               {
+                  "PolicyName":"BedrockInvokePolicy",
+                  "PolicyDocument":{
+                     "Version":"2012-10-17",
+                     "Statement":[
+                        {
+                           "Effect":"Allow",
+                           "Action":"bedrock:InvokeModel",
+                           "Resource":"arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-text-lite-v1"
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      },
+      "StateMachineChatbot":{
+         "Type":"AWS::StepFunctions::StateMachine",
+         "Properties":{
+            "Definition":{
+               "StartAt":"Initialize",
+               "QueryLanguage":"JSONata",
+               "States":{
+                  "Initialize":{
+                     "Type":"Pass",
+                     "Next":"Has Prompt?",
+                     "Assign":{
+                        "counter":"{% $count($states.input.prompts) %}",
+                        "conversation_history":[
+                           ""
+                        ],
+                        "input_prompts":"{% $reverse($states.input.prompts) %}"
+                     }
+                  },
+                  "Has Prompt?":{
+                     "Type":"Choice",
+                     "Choices":[
+                        {
+                           "Next":"Invoke model with prompt",
+                           "Condition":"{% $counter > 0 %}"
+                        }
+                     ],
+                     "Default":"Success"
+                  },
+                  "Success":{
+                     "Type":"Succeed",
+                     "Output":"{% $count($conversation_history) > 0 ? $join($conversation_history, '.') : '' %}"
+                  },
+                  "Invoke model with prompt":{
+                     "Type":"Task",
+                     "Resource":"arn:aws:states:::bedrock:invokeModel",
+                     "Arguments":{
+                        "ModelId":"${bedrockinvokeModel_ModelId_7dab9cd8}",
+                        "Body":{
+                           "inputText":"CONTEXTO: Você é o ClouDIO, bot descontraído da DIO, especialista em cloud computing. Cumprimente se apresentando. Sua missão é ser o dev mais descontraído da nuvem. Sua resposta precisa ser CURTA, SUCCINTA e fácil de entender para estudantes de TI e devs juniores. Use analogias, piadas ou trocadilhos. Responda APENAS UMA VEZ. \n\nExplicação: O que é AWS Step Functions?",
+                           "textGenerationConfig":{
+                              "temperature":0.7,
+                              "topP":0.9,
+                              "maxTokenCount":250
+                           }
+                        },
+                        "ContentType":"application/json",
+                        "Accept":"*/*"
+                     },
+                     "Assign":{
+                        "conversation_history":"{% $append($conversation_history, $states.result.Body.generations[0].text) %}",
+                        "counter":"{% $counter - 1 %}"
+                     },
+                     "Next":"Has Prompt?"
+                  }
+               }
+            },
+            "DefinitionSubstitutions":{
+               "bedrockinvokeModel_ModelId_7dab9cd8":"arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-text-lite-v1"
+            },
+            "RoleArn":{
+               "Fn::GetAtt":[
+                  "BedrockExecutionRole",
+                  "Arn"
+               ]
+            },
+            "StateMachineName":"StateMachineChatbot",
+            "StateMachineType":"STANDARD",
+            "EncryptionConfiguration":{
+               "Type":"AWS_OWNED_KEY"
+            },
+            "LoggingConfiguration":{
+               "Level":"OFF",
+               "IncludeExecutionData":false
+            }
+         },
+         "DependsOn":"BedrockExecutionRole"
+      }
+   }
+}
