@@ -37,3 +37,8 @@ Esta seção listará os principais projetos e desafios que foram ou serão dese
 ### Desafio 4: CloudFormation para criar um StepFunction Chatbot com Amazon Bedrock
 * **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/KelliTissot/codegirls_aws/tree/main/desafio4-cloudformation).
 
+### Desafio 5: Tarefas automatizadas com Lambda Function e S3
+* **📂 Repositório:** [Na pasta cima ou clicando aqui](https://github.com/KelliTissot/codegirls_aws/tree/main/desafio5-lambda-s3).
+
+
+Feito por **Kelli Tissot Moraes** 👋 [Meu LinkedIn](https://www.linkedin.com/in/kellitmoraes/)
