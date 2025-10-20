@@ -30,7 +30,21 @@ Caso deseje usar um outro modelo, é necessário fazer duas alterações no temp
 2. Atualizar a Permissão do IAM (Template JSON)
 * Localize a seção <b>Policies -> PolicyDocument -> Resource</b> e atualize para o novo ARN.
 
-## Demonstrações
+
+## 🚀 Como Criar uma Stack no CloudFormation
+1. Acesse o Console: Na AWS, procure por CloudFormation.
+2. Inicie a Criação: Clique em Criar stack > Com novos recursos (padrão).
+3. Envie o Template: Escolha Fazer upload de um arquivo de modelo e selecione o arquivo (.json ou .yaml).
+4. Preencha os Detalhes:
+    * Dê um Nome para a stack.
+    * Preencha os Parâmetros solicitados.
+5. Crie a Stack:
+    * Clique em Avançar nas próximas telas.
+    * Revise e clique em Criar stack.
+
+* **Aguarde o status mudar para CREATE_COMPLETE.**
+
+## Prints do ambiente criado
 ### ✔️ Stack criada no CloudFormation
 ![Stack criada no CloudFormation](images/stack.png)
 
